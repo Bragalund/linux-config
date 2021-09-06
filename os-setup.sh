@@ -30,6 +30,7 @@ cp .tmux.conf ~/.tmux.conf
 #Set up vim
 mkdir ~/.vim
 mkdir ~/.vim/undodir
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp .vimrc ~/.vimrc
 
 # Oh-My-Zsh
