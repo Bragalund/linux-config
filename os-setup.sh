@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 sudo apt update -y;
 sudo apt upgrade -y;
 sudo apt autoremove -y;
@@ -31,9 +31,11 @@ cp .tmux.conf ~/.tmux.conf
 #Set up vim
 mkdir ~/.vim
 mkdir ~/.vim/undodir
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp .vimrc ~/.vimrc
 
 # Oh-My-Zsh
+sudo apt install zsh;
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp .zshrc ~/.zshrc
 
