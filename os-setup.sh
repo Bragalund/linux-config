@@ -7,6 +7,7 @@ sudo apt autoremove -y;
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'; # Set dark-theme  
 
 # installing some commonly used software  
+sudo apt install software-properties-common apt-transport-https wget -y;
 sudo apt install vim tmux git -y;
 
 # Git
@@ -35,3 +36,12 @@ cp .vimrc ~/.vimrc
 # Oh-My-Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp .zshrc ~/.zshrc
+
+# Java - OpenJDK
+sudo apt install default-jdk -y;
+
+# Install VSCode  
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt install code
+

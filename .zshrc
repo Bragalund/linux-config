@@ -120,3 +120,9 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH=:/usr/local/go/bin
 
+function lazygit() {
+        git add .
+            git commit -a -m "$1"
+                git push
+}
+
