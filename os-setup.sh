@@ -24,6 +24,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh -y;
 
+# nix  
+curl -L https://nixos.org/nix/install | sh
+
 # Set up tmux
 sudo apt install tmux -y;
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
